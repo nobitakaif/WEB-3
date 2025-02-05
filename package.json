@@ -17,5 +17,8 @@
     "url": "https://github.com/nobitakaif/WEB-3/issues"
   },
   "homepage": "https://github.com/nobitakaif/WEB-3#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@noble/ed25519": "^2.2.3"
+  }
 }

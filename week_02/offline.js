@@ -1,3 +1,4 @@
+//  hex -> 1 character = 4 bits
 function arrayToText(byteArr){
     let hexString = ''
     for(let i=0;i<byteArr.length;i++){
@@ -10,6 +11,13 @@ function arrayToText(byteArr){
 const str = "hello"
 const strByte = new TextEncoder().encode(str)
 console.log(strByte)
-const byteArr = new Uint8Array([0,101,108,108,111]) // "hello"
+const byteArr = new Uint8Array([104,101,108,108,111]) // "hello"
 const hexString = arrayToText(byteArr)
 console.log(hexString)
+
+
+// Base64 -> 1 character = 6 bits
+
+const byteArr1 = new Uint8Array([104,101,108])
+const base64Encoded = Buffer.from(byteArr1).toString("base64")
+console.log("base64",base64Encoded)
