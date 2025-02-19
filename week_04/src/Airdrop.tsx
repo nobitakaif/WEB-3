@@ -19,6 +19,8 @@ export function Airdrop(){
     }
     return (
         
+
+        
         <div>
             your public key is <div style={{fontStyle:"red"}}>{wallet.publicKey?.toString()}<br/></div>
             <input type="text" ref={inputRef} placeholder="enter amount" />
