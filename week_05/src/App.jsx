@@ -15,6 +15,7 @@ import '@solana/wallet-adapter-react-ui/styles.css';
 import { Airdrop } from './components/Airdrop';
 import { ShowBalance } from './components/ShowBalance';
 import { SendToken } from './components/SendToken';
+import { SignMessage } from './components/SignMessage';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
                         <ShowBalance/>
                       </div>
                   </div>
+                  <SignMessage/>
   {/*  below this sent functionality from one account to another */}
                   {/* <WalletMultiButton/>
                   <WalletDisconnectButton/>

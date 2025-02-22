@@ -5,7 +5,7 @@ import React, { useRef } from "react"
 export function SendToken(){
     const wallet = useWallet()
     const {connection} = useConnection()
-
+    
     const publickRef = useRef<HTMLInputElement>(null)
     const valueRef = useRef<HTMLInputElement>(null)
 
@@ -24,7 +24,7 @@ export function SendToken(){
         const transaction = new Transaction() // this is the making the transaction 
         transaction.add(SystemProgram.transfer({ // this is the instruction, a transaction has multiple instruction after one by one 
             fromPubkey: wallet.publicKey,
-            toPubkey: new PublicKey(publicKey) ,
+            toPubkey: new PublicKey(publicKey) , // toPubkey is not the type of string it PublicKey type so its need to converted into Publickey
             lamports: Number(ammount)* LAMPORTS_PER_SOL
         }))
         await wallet.sendTransaction(transaction,connection) // this is the actual trasaction 

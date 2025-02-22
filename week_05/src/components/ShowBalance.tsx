@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 
 export function ShowBalance(){
     const wallet = useWallet()
-    const [sol,useSol] =useState<any>(0)
+    const [sol,setSol] =useState<any>(0)
     const {connection} = useConnection()
 
     async function BalReq(){
@@ -12,7 +12,7 @@ export function ShowBalance(){
             return 
         }
         const balance = await connection.getBalance(wallet.publicKey)
-        await useSol(balance/LAMPORTS_PER_SOL)
+        await setSol(balance/LAMPORTS_PER_SOL)
     }
 
     useEffect(()=>{
