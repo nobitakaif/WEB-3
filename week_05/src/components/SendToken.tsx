@@ -21,13 +21,13 @@ export function SendToken(){
         if(!publicKey){
             return 
         }
-        const transaction = new Transaction()
-        transaction.add(SystemProgram.transfer({
+        const transaction = new Transaction() // this is the making the transaction 
+        transaction.add(SystemProgram.transfer({ // this is the instruction, a transaction has multiple instruction after one by one 
             fromPubkey: wallet.publicKey,
             toPubkey: new PublicKey(publicKey) ,
             lamports: Number(ammount)* LAMPORTS_PER_SOL
         }))
-        await wallet.sendTransaction(transaction,connection)
+        await wallet.sendTransaction(transaction,connection) // this is the actual trasaction 
         alert("solana has been sent")
 
     }
