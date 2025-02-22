@@ -20,6 +20,6 @@ export function ShowBalance(){
     },[wallet])
 
     return <div>
-        balance: <span>{sol}</span> SOL
+        balance: {sol} SOL
     </div>
 }

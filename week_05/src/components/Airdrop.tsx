@@ -22,7 +22,7 @@ export function Airdrop(){
 
         
         <div>
-            your public key is <div style={{fontStyle:"red"}}>{wallet.publicKey?.toString()}<br/></div>
+            your public key is <div style={{textDecoration:"red"}}>{wallet.publicKey?.toString()}<br/></div>
             <input type="text" ref={inputRef} placeholder="enter amount" />
             <button onClick={SendAirDrop}>Send Airdrop</button>
     </div>

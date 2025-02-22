@@ -25,10 +25,30 @@ function App() {
        <ConnectionProvider endpoint={"https://api.devnet.solana.com"}> { /* this provide you connection object (url) that we got from alchemy.com*/}
             <WalletProvider wallets={[]} >  { /* this provide you wallet object like phantom, backpack*/}
                 <WalletModalProvider>
-                    <WalletMultiButton/>
-                    <WalletDisconnectButton/>
-                    <Airdrop/>
-                    <ShowBalance/>
+                  <div style={{
+                    height:"100vh",
+                    width:"100vw",
+                    display:"flex",
+                    justifyContent:"center",
+                    alignItems:"center",
+                    flexDirection:"column"
+                  }}>
+                    <div  style={{
+                        width:"100vw",
+                        display:"flex",
+                        justifyContent:"center"
+                      }}>
+                      <div>
+                        <WalletMultiButton/>
+                        </div>
+                        <WalletDisconnectButton/>
+                      </div>
+                      <div>
+                        <Airdrop/>
+                        <ShowBalance/>
+                      </div>
+                  </div>
+                    
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
