@@ -14,6 +14,7 @@ import { clusterApiUrl } from '@solana/web3.js';
 import '@solana/wallet-adapter-react-ui/styles.css';
 import { Airdrop } from './components/Airdrop';
 import { ShowBalance } from './components/ShowBalance';
+import { SendToken } from './components/SendToken';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
        <ConnectionProvider endpoint={"https://api.devnet.solana.com"}> { /* this provide you connection object (url) that we got from alchemy.com*/}
             <WalletProvider wallets={[]} >  { /* this provide you wallet object like phantom, backpack*/}
                 <WalletModalProvider>
-                  <div style={{
+                  {/* <div style={{
                     height:"100vh",
                     width:"100vw",
                     display:"flex",
@@ -47,7 +48,10 @@ function App() {
                         <Airdrop/>
                         <ShowBalance/>
                       </div>
-                  </div>
+                  </div> */}
+                  <WalletMultiButton/>
+                  <WalletDisconnectButton/>
+                    <SendToken/>
                     
                 </WalletModalProvider>
             </WalletProvider>

@@ -13,6 +13,6 @@ export function TokenLaunchpad() {
         <input className='inputText' type='text' placeholder='Image URL'></input> <br />
         <input className='inputText' type='text' placeholder='Initial Supply'></input> <br />
         <button className='btn'>Create a token</button>
-        
+        <button>kaif</button>
     </div>
 }
