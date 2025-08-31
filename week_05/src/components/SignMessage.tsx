@@ -10,9 +10,11 @@ export function SignMessage(){
 
     async function messagSigned(){
         if(!publicKey){
+            alert("pls connect your wallet and try again")
             throw new Error("wallet is not connected")
         }
         if(!signMessage){
+            alert("something went wrong with your sign messages")
             throw new Error("wallet does not support message signing")
             
         }

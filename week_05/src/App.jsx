@@ -25,7 +25,7 @@ function App() {
     <>
     {/* endpoint is the own RPC url server https://alchemy.com  */}
        <ConnectionProvider endpoint={"https://api.devnet.solana.com"}> { /* this provide you connection object (url) that we got from alchemy.com*/}
-            <WalletProvider wallets={[]} >  { /* this provide you wallet object like phantom, backpack*/}
+            <WalletProvider wallets={[]}  autoConnect>  { /* this provide you wallet object like phantom, backpack*/}
                 <WalletModalProvider>
                   <div style={{
                     height:"100vh",
@@ -40,7 +40,7 @@ function App() {
                         display:"flex",
                         justifyContent:"center"
                       }}>
-                      <div>
+                      <div >
                         <WalletMultiButton/>
                         </div>
                         <WalletDisconnectButton/>

@@ -1,6 +1,6 @@
 
 import './App.css'
-import { TokenLaunchpad } from './assets/components/TokenLaunchPad'
+import { TokenLaunchpad } from './components/TokenLaunchPad'
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import {
     WalletModalProvider,
